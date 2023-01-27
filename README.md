@@ -1,7 +1,7 @@
-- 以下にて、Svelteの基礎から応用までを学びつつ、タスク管理アプリを作成
-  - https://www.twilio.com/ja/blog/all-you-need-to-know-svelte-jp
+以下にて、Svelteの基礎から応用までを学びつつ、タスク管理アプリを作成
+https://www.twilio.com/ja/blog/all-you-need-to-know-svelte-jp
 
-- 以下は、デフォルトで記述されていたもの
+以下は、デフォルトで記述されていたもの
 ---
 
 # svelte app

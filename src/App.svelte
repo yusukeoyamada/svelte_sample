@@ -6,6 +6,8 @@
   let lastName = ""
   let firstName = ""
 
+  // リアクティブ宣言「$:」を使用して
+  // 変数と変数を同期させて維持させる
   $: fullName = lastName + " " + firstName
 
   function handleSubmit() {
@@ -23,7 +25,16 @@
 {:else}
   <h1>タスクリストアプリケーションへようこそ!</h1>
   <h3>名前を入力してください。</h3>
+
+  <!-- フォームは、デフォルトの動作として、form要素に送信先が指定されていない場合、
+  現在のURLに対してフォームの内容を送信します。
+  現在のURLに対してフォームの送信が行われると、ページが自動的にリロードされてしまいます。
+  この動作を防ぐために、「event.preventDefault()」を走らせます。 -->
   <form on:submit|preventDefault={handleSubmit}>
+
+    <!-- 「bind:value」により、input要素に入力される値は、{lastName}や、{firstName}変数に紐付けられます。
+    この紐付けにより、データを双方向で同期させることができます。 -->
+      <!-- ユーザーが入力要素の値を変更すると、それに応じて値が更新される -->
     <div>
       <input bind:value={lastName} type="text" placeholder="姓" required>
     </div>
